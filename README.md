@@ -1,6 +1,6 @@
 # Ghost for Azure Web Apps
 
-![Ghost version used](https://img.shields.io/badge/ghost-v1.23.-green.svg)
+![Ghost version used](https://img.shields.io/badge/ghost-v1.23.1-green.svg)
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 To work with Azure Web Applications, Ghost application need some adaptation.
@@ -8,8 +8,8 @@ This repository permit the deployment of ghost instance in a web application wit
 
 ## How to use?
 1. In branch selector, select the version you want to deploy :
-  * azure : for the latest version
-  * tags:vX.XX.X : for specific version (check the version in badge above)
+    * azure : for the latest version
+    * tags/v0.00.0 : for specific version (check the version in badge above)
 2. [Deploy template to Azure](https://azuredeploy.net/)
 3. After a successful deployment, in wep application console, rebuild npm modules:
 ```bash
