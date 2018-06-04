@@ -40,7 +40,7 @@ OR
 
 ```bash
 git checkout my_branch
-git pull https://github.com/skaario/azure-ghost azure
+git pull https://github.com/woolfyx/azure-ghost azure
 ```
 
 ## Credits
