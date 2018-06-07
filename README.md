@@ -21,6 +21,10 @@ node db.js
 ```
 5. Connect to your website and enjoy !
 
+## How I update my site ?
+
+Check the process on the [dedicated page](https://github.com/woolfyx/azure-ghost/wiki/How-I-can-update-my-site-%3F).
+
 ## Optional step
 
 Check the [wiki](https://github.com/woolfyx/azure-ghost/wiki) for more details and optional steps
