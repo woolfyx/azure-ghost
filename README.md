@@ -3,6 +3,8 @@
 ![Ghost version used](https://img.shields.io/badge/ghost-v1.24.1-green.svg)
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
+![azure logo](https://dtb5pzswcit1e.cloudfront.net/assets/images/product_logos/icon_microsoft_azure_open_service_broker@2x.png)![ghost logo](https://crunchbase-production-res.cloudinary.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1405692357/g2n5ifxzvoacgkn0g73l.jpg)
+
 To work with Azure Web Applications, Ghost application need some adaptation.
 This repository permit the deployment of ghost instance in a web application with insights.
 
@@ -28,24 +30,6 @@ Check the process on the [dedicated page](https://github.com/woolfyx/azure-ghost
 ## Optional step
 
 Check the [wiki](https://github.com/woolfyx/azure-ghost/wiki) for more details and optional steps
-
-### Want to customize ?
-
-If you want to customize the version or files you can fork this repository.
-You can also create a branch for each of your site if you need customization :
-```bash
-git checkout azure
-git checkout -b my_blog
-```
-You can keep your fork up to date(if you want the latest ghost version).
-[https://help.github.com/articles/syncing-a-fork/](https://help.github.com/articles/syncing-a-fork/)
-
-OR
-
-```bash
-git checkout my_branch
-git pull https://github.com/woolfyx/azure-ghost azure
-```
 
 ## Credits
 _This repository is a fork and an adaptation of [solvsoftware repository](https://github.com/solvsoftware/Ghost-Azure)_
