@@ -3,10 +3,10 @@
 ![Ghost version used](https://img.shields.io/badge/ghost-v1.24.1-green.svg)
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
-![azure logo](https://dtb5pzswcit1e.cloudfront.net/assets/images/product_logos/icon_microsoft_azure_open_service_broker@2x.png)![ghost logo](https://crunchbase-production-res.cloudinary.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1405692357/g2n5ifxzvoacgkn0g73l.jpg)
-
 To work with Azure Web Applications, Ghost application need some adaptation.
 This repository permit the deployment of ghost instance in a web application with insights.
+
+![ghost screenshot](https://ghost.org/images/vs/ghost-content-1152x.png)
 
 ## How to use?
 1. In branch selector, select the version you want to deploy :
