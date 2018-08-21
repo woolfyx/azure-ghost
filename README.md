@@ -1,6 +1,6 @@
 # Ghost for Azure Web Apps
 
-![Ghost version used](https://img.shields.io/badge/ghost-v1.25.5-green.svg)
+![Ghost version used](https://img.shields.io/badge/ghost-v2.0.2-green.svg)
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 To work with Azure Web Applications, Ghost application need some adaptation.
