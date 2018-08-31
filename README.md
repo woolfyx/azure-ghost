@@ -10,14 +10,14 @@ This repository permit the deployment of ghost instance in a web application wit
 <hr />
 <p align="center">
     <a href="https://ghost.org">
-        <img src="https://img.shields.io/badge/ghost-v2.0.2-green.svg" alt="Ghost version used" />
-    </a>
+        <img src="https://img.shields.io/badge/ghost-v2.1.0-green.svg" alt="Ghost version used" />
+    </a> <br/> <br/>
     <a href="https://azuredeploy.net/">
         <img src="https://azuredeploy.net/deploybutton.png" alt="Deploy to Azure" />
     </a>
 </p>
 
-&nbsp;
+
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/120485/43994697-62e2bdc2-9d99-11e8-94fc-021ab9756f33.gif" width="800" />
@@ -27,7 +27,7 @@ This repository permit the deployment of ghost instance in a web application wit
 
 ---
 
-## Upgrade to v1.25.X
+## Upgrade to v1.25.X and newer
 With the release of the new Ghost editor *Koenig*, when you migrate your Ghost instance from a prior version to v1.25.X **you need to update your database**.
 Following this specific procedure to migrate to v1.25.X from a 1.2X.X version:
 1. **Update** your application as describe [**here**](https://github.com/woolfyx/azure-ghost/wiki/How-I-can-update-my-site-%3F)
