@@ -10,12 +10,22 @@ Role = ghostBookshelf.Model.extend({
 
     tableName: 'roles',
 
+    relationships: ['permissions'],
+
+    relationshipBelongsTo: {
+        permissions: 'permissions'
+    },
+
     users: function users() {
         return this.belongsToMany('User');
     },
 
     permissions: function permissions() {
         return this.belongsToMany('Permission');
+    },
+
+    api_keys: function apiKeys() {
+        return this.hasMany('ApiKey');
     }
 }, {
     /**
@@ -24,7 +34,7 @@ Role = ghostBookshelf.Model.extend({
      * @return {Array} Keys allowed in the `options` hash of the model's method.
      */
     permittedOptions: function permittedOptions(methodName) {
-        var options = ghostBookshelf.Model.permittedOptions(),
+        var options = ghostBookshelf.Model.permittedOptions.call(this, methodName),
 
             // whitelists for the `options` hash argument on methods, by method name.
             // these are the only options that can be passed to Bookshelf / Knex.

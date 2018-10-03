@@ -249,6 +249,10 @@ User = ghostBookshelf.Model.extend({
         return this.hasMany('Posts', 'created_by');
     },
 
+    sessions: function sessions() {
+        return this.hasMany('Sessions');
+    },
+
     roles: function roles() {
         return this.belongsToMany('Role');
     },
@@ -328,16 +332,16 @@ User = ghostBookshelf.Model.extend({
      * @return {Array} Keys allowed in the `options` hash of the model's method.
      */
     permittedOptions: function permittedOptions(methodName, options) {
-        var permittedOptionsToReturn = ghostBookshelf.Model.permittedOptions(methodName),
+        var permittedOptionsToReturn = ghostBookshelf.Model.permittedOptions.call(this, methodName),
 
             // whitelists for the `options` hash argument on methods, by method name.
             // these are the only options that can be passed to Bookshelf / Knex.
             validOptions = {
                 findOne: ['withRelated', 'status'],
                 setup: ['id'],
-                edit: ['withRelated', 'id', 'importPersistUser'],
+                edit: ['withRelated', 'importPersistUser'],
                 add: ['importPersistUser'],
-                findPage: ['page', 'limit', 'columns', 'filter', 'order', 'status', 'absolute_urls'],
+                findPage: ['page', 'limit', 'columns', 'filter', 'order', 'status'],
                 findAll: ['filter']
             };
 
