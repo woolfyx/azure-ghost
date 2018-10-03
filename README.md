@@ -10,7 +10,7 @@ This repository permit the deployment of ghost instance in a web application wit
 <hr />
 <p align="center">
     <a href="https://ghost.org">
-        <img src="https://img.shields.io/badge/ghost-v2.1.0-green.svg" alt="Ghost version used" />
+        <img src="https://img.shields.io/badge/ghost-v2.2.0-green.svg" alt="Ghost version used" />
     </a> <br/> <br/>
     <a href="https://azuredeploy.net/">
         <img src="https://azuredeploy.net/deploybutton.png" alt="Deploy to Azure" />
@@ -27,14 +27,9 @@ This repository permit the deployment of ghost instance in a web application wit
 
 ---
 
-## Upgrade to v1.25.X and newer
-With the release of the new Ghost editor *Koenig*, when you migrate your Ghost instance from a prior version to v1.25.X **you need to update your database**.
-Following this specific procedure to migrate to v1.25.X from a 1.2X.X version:
-1. **Update** your application as describe [**here**](https://github.com/woolfyx/azure-ghost/wiki/How-I-can-update-my-site-%3F)
-2. In Azure portal, **open a console** for your application
-3. Proceed to the database migration with the **following command**: `knex-migrator migrate`
-
 ## How to use?
+
+### New deployment
 1. [Deploy template to Azure](https://azuredeploy.net/)
 2. Fullfill the form to perform the deployment
 3. After a successful deployment, in wep application console, rebuild npm modules:
@@ -46,6 +41,9 @@ npm rebuild
 node db.js
 ```
 5. Connect to your website and enjoy !
+
+### Upgrade
+Full **update** process is available [**here**](https://github.com/woolfyx/azure-ghost/wiki/How-I-can-update-my-site-%3F)
 
 ## How I update my site ?
 

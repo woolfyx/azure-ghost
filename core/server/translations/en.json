@@ -73,6 +73,9 @@
                 "clientCredentialsNotProvided": "Client credentials were not provided",
                 "clientCredentialsNotValid": "Client credentials were not valid",
                 "forInformationRead": "For information on how to fix this, please read {url}.",
+                "unknownOrigin": "Could not determine origin of request.",
+                "mismatchedOrigin": "Request made from incorrect origin.",
+                "missingUserIDForSession": "Cannot create session without user id.",
                 "accessDenied": "Access denied.",
                 "pleaseSignIn": "Please Sign In"
             },
@@ -123,6 +126,9 @@
             },
             "blogIcon": {
                 "error": "Could not fetch icon dimensions."
+            },
+            "images": {
+                "invalidDimensions": "Could not fetch image dimensions."
             },
             "redirectsWrongFormat": "Incorrect redirects file format."
         },
@@ -388,7 +394,8 @@
             },
             "images": {
                 "missingFile": "Please select an image.",
-                "invalidFile": "Please select a valid image."
+                "invalidFile": "Please select a valid image.",
+                "isNotSquare": "Please select a valid image file with square dimensions."
             },
             "icons": {
                 "missingFile": "Please select an icon.",
