@@ -10,7 +10,7 @@ This repository permit the deployment of ghost instance in a web application wit
 <hr />
 <p align="center">
     <a href="https://ghost.org">
-        <img src="https://img.shields.io/badge/ghost-v2.2.0-green.svg" alt="Ghost version used" />
+        <img src="https://img.shields.io/badge/ghost-v2.3.0-green.svg" alt="Ghost version used" />
     </a> <br/> <br/>
     <a href="https://azuredeploy.net/">
         <img src="https://azuredeploy.net/deploybutton.png" alt="Deploy to Azure" />
