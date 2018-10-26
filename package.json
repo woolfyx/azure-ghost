@@ -97,7 +97,8 @@
     "unidecode": "0.1.8",
     "uuid": "3.3.2",
     "validator": "6.3.0",
-    "xml": "1.0.1"
+    "xml": "1.0.1",
+    "applicationinsights": "1.0.3"
   },
   "optionalDependencies": {
     "sharp": "0.20.7",
