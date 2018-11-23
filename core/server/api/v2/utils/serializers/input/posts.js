@@ -1,12 +1,37 @@
 const _ = require('lodash');
 const debug = require('ghost-ignition').debug('api:v2:utils:serializers:input:posts');
 const url = require('./utils/url');
+const utils = require('../../index');
+const labs = require('../../../../../services/labs');
+
+function removeMobiledocFormat(frame) {
+    if (frame.options.formats && frame.options.formats.includes('mobiledoc')) {
+        frame.options.formats = frame.options.formats.filter((format) => {
+            return (format !== 'mobiledoc');
+        });
+    }
+}
+
+function includeTags(frame) {
+    if (!frame.options.withRelated) {
+        frame.options.withRelated = ['tags'];
+    } else if (!frame.options.withRelated.includes('tags')) {
+        frame.options.withRelated.push('tags');
+    }
+}
 
 module.exports = {
     browse(apiConfig, frame) {
         debug('browse');
 
-        if (!_.get(frame, 'options.context.user') && _.get(frame, 'options.context.api_key_id')) {
+        // @TODO: `api_key_id` does not work long term, because it can be either a content or an admin api key?
+        /**
+         * ## current cases:
+         * - context object is empty (functional call, content api access)
+         * - api_key_id exists? content api access
+         * - user exists? admin api access
+         */
+        if (utils.isContentAPI(frame)) {
             // CASE: the content api endpoints for posts should only return non page type resources
             if (frame.options.filter) {
                 if (frame.options.filter.match(/page:\w+\+?/)) {
@@ -21,6 +46,12 @@ module.exports = {
             } else {
                 frame.options.filter = 'page:false';
             }
+            // CASE: the content api endpoint for posts should not return mobiledoc
+            removeMobiledocFormat(frame);
+            if (labs.isSet('members')) {
+                // CASE: Members needs to have the tags to check if its allowed access
+                includeTags(frame);
+            }
         }
 
         debug(frame.options);
@@ -29,8 +60,21 @@ module.exports = {
     read(apiConfig, frame) {
         debug('read');
 
-        if (!_.get(frame, 'options.context.user') && _.get(frame, 'options.context.api_key_id')) {
+        // @TODO: `api_key_id` does not work long term, because it can be either a content or an admin api key?
+        /**
+         * ## current cases:
+         * - context object is empty (functional call, content api access)
+         * - api_key_id exists? content api access
+         * - user exists? admin api access
+         */
+        if (utils.isContentAPI(frame)) {
             frame.data.page = false;
+            // CASE: the content api endpoint for posts should not return mobiledoc
+            removeMobiledocFormat(frame);
+            if (labs.isSet('members')) {
+                // CASE: Members needs to have the tags to check if its allowed access
+                includeTags(frame);
+            }
         }
 
         debug(frame.options);
