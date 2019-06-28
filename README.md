@@ -1,5 +1,9 @@
 &nbsp;
 <p align="center">
+  <b>
+    ** This repository is archived and not maintained **<br>
+    Please have a look on <a href="https://docs.ghost.org/setup/">Ghost documentation</a> for supported deployment method.
+  </b><br><br>
   <a href="https://ghost.org">
     <img src="https://user-images.githubusercontent.com/120485/43974508-b64b2fe8-9cd2-11e8-8e58-707254b8817c.png" width="200px" alt="Ghost" />
   </a>
@@ -10,10 +14,7 @@ This repository permit the deployment of ghost instance in a web application wit
 <hr />
 <p align="center">
     <a href="https://ghost.org">
-        <img src="https://img.shields.io/badge/ghost-v2.6.1-green.svg" alt="Ghost version used" />
-    </a> <br/> <br/>
-    <a href="https://azuredeploy.net/">
-        <img src="https://azuredeploy.net/deploybutton.png" alt="Deploy to Azure" />
+        <img src="https://img.shields.io/badge/ghost-v2.6.1-red.svg" alt="Ghost version used" />
     </a>
 </p>
 
